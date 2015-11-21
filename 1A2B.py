@@ -20,6 +20,9 @@ print "Please enter 4 different numbers."
 
 
 for tries in range(1,11):
+    
+    ##Prompts user input and appends the result to guess_list as str. "3428" as ["3","4","2","8"]
+    
     print "Try: ", tries
     guess = str(raw_input("Enter your guess: "))
     guess_list = []
@@ -30,8 +33,9 @@ for tries in range(1,11):
 
     guess_to_list(guess)
 
+
     ##Calculate total of As and Bs
-    
+    ##Count correct num in incorrect possitions    
     def Count_B():
         total_B = 0
         for i in range(4):
@@ -40,8 +44,9 @@ for tries in range(1,11):
                     total_B += 1
         print total_B, "B"
 
-    total_A = 0
 
+    ##Count correct num in correct positions
+    total_A = 0
     for each in range(4):
         if guess_list[each] == gen_num_str[each]:
             total_A = total_A + 1
@@ -58,7 +63,7 @@ for tries in range(1,11):
             print total_A, "A"
             Count_B()
 
-Thanks = raw_input("Thanks for playing!")
+print "Thanks for playing!"
 
 
  
